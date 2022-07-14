@@ -11,13 +11,22 @@ import java.util.Collections;
 import java.util.List;
 
 public class Chat {
-    List<Word> mala = Collections.singletonList(new Word());
+//    List<Word> mala = Collections.singletonList(new Word());
 
+    /**
+     * Metodo encadado de realizar la separacion de datos ingresados por el usuario
+     * @param text informacion de los por el usuario
+     * @return retorna una lista para poder tratar los datos
+     */
     private List<String> separateWords(String text){
        return Arrays.stream(text.split(" "))
                 .toList();
     }
 
+    /**
+     * Metodo encargado de transformar la informacion de los datos para
+     * remplacar los datos por **** de los datos.
+     */
     public void chatMalasPalabras(String text){
         Flux.fromIterable(separateWords(text))
                 .map(word -> Word.obtenerPalabras()

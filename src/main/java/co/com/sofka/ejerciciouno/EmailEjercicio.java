@@ -3,6 +3,12 @@ package co.com.sofka.ejerciciouno;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Funcion encargada de realizar los puntos de los
+ * con los metodos del emeail para los datos del usuasio.
+ * @author Hernan Velasquez
+ * @version 1.0
+ */
 public class EmailEjercicio {
    private final List<Email> emails;
 
@@ -147,19 +153,5 @@ public class EmailEjercicio {
     public Long countEmailsHotmail(){
         return filterHotmail().stream()
                 .count();
-    }
-
-    public List<Object> emailsEnviados(){
-        return emails.stream()
-                .distinct()
-                .filter(email -> email.getEmail().matches("^[a-zA-Z0-9_!#$%&'\\*+/=?{|}~^.-]+@[a-zA-Z0-9.-]+$"))
-                .map(stadus -> {
-                    if(stadus.getStado()){
-                        stadus.modifyStad(!stadus.getStado());
-                        return stadus;
-                    }
-                    return stadus;
-                })
-                .collect(Collectors.toList());
     }
 }

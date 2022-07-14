@@ -1,5 +1,11 @@
 package co.com.sofka.ejerciciouno;
 
+/**
+ * Clase encargada de realizar
+ * la validaion del email para los datos
+ * @author Hernan Velasquez
+ * @version 1.0
+ */
 public class Email {
         private String email;
         private Boolean stad;

@@ -1,10 +1,14 @@
 package co.com.sofka.ejerciciotres;
 
 import java.util.function.BiFunction;
-import java.util.function.DoubleFunction;
 import java.util.function.Function;
-import java.util.stream.Stream;
 
+/**
+ * Clase encargada de realizar las derivadas dando solicion al ejercico
+ * tres del documento de trabajo
+ * @author Hernan Velasquez
+ * @version 1.0
+ */
 public class Derivadas {
     /**
      * Metodo encargado de realizar las derivadas de las funciones
