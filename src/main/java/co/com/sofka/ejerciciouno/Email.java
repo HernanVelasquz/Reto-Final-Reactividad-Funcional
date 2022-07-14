@@ -13,11 +13,12 @@ public class Email {
             return email;
         }
 
-    public Boolean stad() {
+    public Boolean getStado() {
         return stad;
     }
 
-    public void modifyStad(boolean stad) {
-        this.stad = false;
+    public Boolean modifyStad(boolean stad) {
+        stad = false;
+        return stad;
     }
 }

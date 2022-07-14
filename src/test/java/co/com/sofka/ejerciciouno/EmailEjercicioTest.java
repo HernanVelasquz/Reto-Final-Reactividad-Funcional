@@ -50,4 +50,10 @@ class EmailEjercicioTest {
         Assertions.assertEquals(4, amountsHotmal);
     }
 
+    @Test
+    void testEmailsEnviados() {
+        var emailsEnviados = emailEjercicio.emailsEnviados();
+        System.out.println(emailsEnviados);
+//        Assertions.assertEquals(40, amountsEmails);
+    }
 }

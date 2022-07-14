@@ -148,4 +148,18 @@ public class EmailEjercicio {
         return filterHotmail().stream()
                 .count();
     }
+
+    public List<Object> emailsEnviados(){
+        return emails.stream()
+                .distinct()
+                .filter(email -> email.getEmail().matches("^[a-zA-Z0-9_!#$%&'\\*+/=?{|}~^.-]+@[a-zA-Z0-9.-]+$"))
+                .map(stadus -> {
+                    if(stadus.getStado()){
+                        stadus.modifyStad(!stadus.getStado());
+                        return stadus;
+                    }
+                    return stadus;
+                })
+                .collect(Collectors.toList());
+    }
 }
