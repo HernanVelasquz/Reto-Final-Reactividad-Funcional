@@ -4,9 +4,10 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 
 public class Integrales {
+
     public String integrar(Double coeficiente, Double exponente) {
         BiFunction<Double, Double, Double> coeficienteResult = this::validation;
-        return coeficienteResult.apply(coeficiente, exponente) +"x^" + exponenteResult(exponente);
+        return coeficienteResult.apply(coeficiente, exponente)+"x^"+ exponenteResult(exponente);
     }
 
     private Double validation(Double coeficiente, Double exponent){
@@ -16,4 +17,5 @@ public class Integrales {
     private Double exponenteResult(Double expo){
         return expo + 1;
     }
+
 }
